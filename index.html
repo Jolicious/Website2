@@ -1,50 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Department of Unnecessary Decisions</title>
-  <style>
-    :root { color-scheme: dark; --ink:#f7f0df; --muted:#b9b09f; --accent:#ffcc66; --panel:#191817; --line:#3b3730; }
-    * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px; background:radial-gradient(circle at 20% 10%,#3a2c43,transparent 35%),#0e0d0d; color:var(--ink); font:16px/1.5 system-ui,sans-serif; }
-    main { width:min(720px,100%); background:rgba(25,24,23,.94); border:1px solid var(--line); border-radius:24px; padding:clamp(24px,6vw,56px); box-shadow:0 24px 80px #0008; }
-    .stamp { color:var(--accent); letter-spacing:.16em; text-transform:uppercase; font-size:.72rem; font-weight:800; }
-    h1 { font:700 clamp(2.2rem,7vw,5rem)/.95 Georgia,serif; margin:18px 0; max-width:600px; }
-    p { color:var(--muted); max-width:560px; }
-    button { margin-top:24px; border:0; border-radius:999px; padding:15px 22px; background:var(--accent); color:#231b0d; font-weight:800; font-size:1rem; cursor:pointer; transition:transform .15s,filter .15s; }
-    button:hover { transform:translateY(-2px) rotate(-1deg); filter:brightness(1.08); }
-    button:active { transform:translateY(1px) scale(.98); }
-    #result { min-height:110px; margin-top:34px; padding-top:24px; border-top:1px solid var(--line); }
-    .verdict { color:var(--accent); font:700 1.5rem Georgia,serif; }
-    .score { color:var(--muted); font-size:.9rem; margin-top:8px; }
-    footer { margin-top:30px; color:#756e64; font-size:.75rem; }
-  </style>
-</head>
-<body>
-  <main>
-    <div class="stamp">Officially unnecessary since today</div>
-    <h1>Should you do the thing?</h1>
-    <p>The Department of Unnecessary Decisions will conduct a rigorous, completely fictional assessment and issue a verdict with no practical consequences.</p>
-    <button id="decide">Consult the department</button>
-    <section id="result" aria-live="polite"><span class="score">No decision has been made. This is already becoming unnecessarily tense.</span></section>
-    <footer>File DUD-∞ · Certified by nobody · Please do not make important decisions here</footer>
-  </main>
-  <script>
-    const verdicts = [
-      'Absolutely. The vibes have been reviewed and found legally sufficient.',
-      'No. A tiny committee inside your brain has filed an objection.',
-      'Only if you wear a hat. The department will not explain why.',
-      'Yes, but dramatically. Otherwise what is even the point?',
-      'Postponed until you acquire one unnecessary snack.',
-      'The answer is yes, pending approval from a pigeon.',
-      'No decision. The paperwork has become sentient.'
-    ];
-    const reasons = ['the moon is in a spreadsheet','three imaginary experts agreed','your browser history looked confident','a coin was consulted but had questions','the department cat blinked twice'];
-    document.querySelector('#decide').addEventListener('click', () => {
-      const confidence = Math.floor(51 + Math.random() * 49);
-      document.querySelector('#result').innerHTML = `<div class="verdict">${verdicts[Math.floor(Math.random()*verdicts.length)]}</div><div class="score">Confidence: ${confidence}% · Reason: ${reasons[Math.floor(Math.random()*reasons.length)]}.</div>`;
-    });
-  </script>
-</body>
-</html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Please Take a Number</title>
+<style>
+:root{--paper:#f1eadb;--ink:#25221e;--red:#b23a32;--rule:#cfc4b0}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}.page{width:min(680px,calc(100% - 40px));margin:0 auto;padding:54px 0 34px}header{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px solid var(--ink);padding-bottom:12px}.kicker{font:700 12px/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}.date{font:12px Arial,sans-serif;color:#756d62}h1{font-size:clamp(48px,11vw,88px);line-height:.88;letter-spacing:-.07em;max-width:570px;margin:64px 0 22px;font-weight:700}.intro{font-size:20px;line-height:1.45;max-width:470px;margin-bottom:52px}.machine{border:2px solid var(--ink);background:#e8dfcf;padding:26px;box-shadow:10px 10px 0 var(--red)}.machine-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--rule);padding-bottom:17px}.machine-label{font:700 13px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.light{width:11px;height:11px;border-radius:50%;background:var(--red)}.display{padding:26px 0 23px;font-size:25px;min-height:83px}.number{font-size:70px;line-height:.9;color:var(--red);letter-spacing:-.06em}button{width:100%;padding:17px;background:var(--ink);color:var(--paper);border:0;font:700 16px Arial,sans-serif;cursor:pointer}button:hover{background:var(--red)}button:active{transform:translateY(2px)}.receipt{display:none;margin-top:26px;border-top:1px dashed var(--ink);padding-top:20px;font:13px/1.65 Arial,sans-serif}.receipt.show{display:block}.fine{margin-top:58px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--rule);padding-top:14px;color:#756d62;font:12px/1.4 Arial,sans-serif}@media(max-width:500px){.page{padding-top:30px}.date{display:none}h1{margin-top:48px}.machine{padding:20px;box-shadow:7px 7px 0 var(--red)}}
++</style>
++</head><body><main class="page"><header><div class="kicker">The Department of Waiting</div><div class="date" id="date"></div></header><h1>Please take a number.</h1><p class="intro">There is no queue, no appointment, and nobody ahead of you. Still, it feels important to be organised about this.</p><section class="machine" aria-label="Ticket machine"><div class="machine-top"><div class="machine-label">Now serving</div><div class="light"></div></div><div class="display" id="display">The machine is ready.</div><button id="ticket">Take a number</button><div class="receipt" id="receipt"></div></section><div class="fine"><span>Office hours: whenever</span><span>Window 01 is closed</span></div></main>
++<script>const display=document.querySelector('#display'),receipt=document.querySelector('#receipt'),date=document.querySelector('#date'),reasons=['the queue has developed a mild opinion','someone is looking for a pen','the clerk went to admire a cloud','your number is being laminated','the previous number was suspicious'];let number=0;date.textContent=new Date().toLocaleDateString(undefined,{year:'numeric',month:'short',day:'numeric'});document.querySelector('#ticket').addEventListener('click',()=>{number=number?number+1:Math.floor(Math.random()*18)+12;display.innerHTML='A-<span class="number">'+String(number).padStart(3,'0')+'</span>';receipt.classList.add('show');receipt.textContent='Please keep this number. Your estimated wait is somewhere between now and later because '+reasons[Math.floor(Math.random()*reasons.length)]+'.'});</script></body></html>
